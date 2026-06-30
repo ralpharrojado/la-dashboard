@@ -2,10 +2,6 @@
 import { use, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
-// Pre-generate pages for IDs 1–100 (covers all seed leads + ~80 new leads created during demo)
-export function generateStaticParams() {
-  return Array.from({ length: 100 }, (_, i) => ({ id: String(i + 1) }));
-}
 import { useLeads } from '@/lib/LeadsContext';
 import { StatusBadge, LeadTypeBadge, TrackBadge, StaleBadge } from '@/components/StatusBadge';
 import {
